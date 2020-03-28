@@ -38,7 +38,7 @@
 #' @examples
 #' \dontrun{
 #' ## my first log
-#' ilog("myfirstlog.txt")
+#' ilog("../myFirstLog.tx")
 #' str(infert)
 #' str(iris)
 #' ilog.close()
@@ -89,13 +89,13 @@ ilog <- function(logfile = "LOG.txt", append = FALSE) {
 
   # writing log info
   sink(logfile, append = TRUE, split = TRUE)
-  printLines(width = 70)
-  cat(paste0('      log: ', getwd(), "/", logfile,
+  printLines(width = 80)
+  cat(paste0('\n      log: ', getwd(), "/", logfile,
              '\n  open on: ', Sys.time(),'\n'))
   if(append) {
     cat(paste0("     note: ", "appended\n"))
   } else {cat(paste0("     note: ", "replaced\n"))}
-  printLines(width = 70)
+  printLines(width = 80)
   sink()
 
   addTaskCallback(ilogtxt, name = "ilogtxt")
@@ -119,11 +119,11 @@ ilog.close <- function() {
   }
   # writing log info
   sink(.logenv$logfile, append = TRUE, split = TRUE)
-  printLines(width = 70)
-  cat(paste0('      log: ', getwd(), "/", .logenv$logfile, "\n",
-             'closed on: ',
+  printLines(width = 80)
+  cat(paste0('\n      log: ', getwd(), "/", .logenv$logfile,
+             '\nclosed on: ',
              Sys.time(),'\n'))
-  printLines(width = 70)
+  printLines(width = 80)
   sink()
   eval(rm(list= ".logenv", envir = sys.frame(-1)))
   invisible(NULL)

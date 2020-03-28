@@ -53,7 +53,7 @@ normal.
 \examples{
 \dontrun{
 ## my first log
-ilog("myfirstlog.txt")
+ilog("../myFirstLog.tx")
 str(infert)
 str(iris)
 ilog.close()

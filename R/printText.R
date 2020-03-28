@@ -57,7 +57,7 @@ printText <- function(x, txt, split = NULL, printDF = FALSE) {
 
 #' @rdname printText
 #' @export
-printLines <- function(x = "=", width = 80)
+printLines <- function(x = "_", width = 80)
 {
     cat(paste(rep(x, width), collapse = ""), "\n")
 }

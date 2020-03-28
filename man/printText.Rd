@@ -11,7 +11,7 @@
 \usage{
 printText(x, txt, split = NULL, printDF = FALSE)
 
-printLines(x = "=", width = 80)
+printLines(x = "_", width = 80)
 
 printMsg(txt = NULL)
 
